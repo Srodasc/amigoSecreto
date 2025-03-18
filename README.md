@@ -6,7 +6,7 @@ Una aplicación web para organizar el tradicional juego de "Amigo Secreto", perm
 
 ## 📸 Captura de Pantalla
 
-[Amigo_Secreto](https://github.com/user-attachments/assets/d5144269-5f2d-4c2c-8878-6e1a9c9e03be)
+![Amigo_Secreto](https://github.com/user-attachments/assets/d5144269-5f2d-4c2c-8878-6e1a9c9e03be)
 
 ## 📖 Uso
 
