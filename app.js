@@ -22,9 +22,9 @@ function agregarAmigo() {
 function mostrarAmigos() {
   let amigos = "";
   for (let i = 0; i < nombreAmigo.length; i++) {
-    amigos += `<li>${nombreAmigo[i]}</li>`;
-    asignarTextoElemento("ul", amigos);
+    amigos += `<li>${nombreAmigo[i]}</li>`;  
   }
+  asignarTextoElemento("ul", amigos);
 }
 
 function sorterAmigos() {
@@ -48,8 +48,7 @@ function sorterAmigos() {
   } else {
     listaresutados.push(resultado);
     asignarTextoElemento(
-      "h2",
-      `El amigo secreto es: ${resultado}`
+      "h2",`El amigo secreto es: ${resultado}`
     );
   }
   console.log(resultado);
