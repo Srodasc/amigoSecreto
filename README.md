@@ -24,7 +24,7 @@ Este proyecto está bajo la licencia MIT - consulta el archivo LICENSE para más
 
 ## 📧 Contacto
 
-- GitHub: [@usuario](https://github.com/Srodasc)
+- GitHub: [@Srodasc](https://github.com/Srodasc)
 
 ---
 
