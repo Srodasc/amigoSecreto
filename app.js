@@ -1,6 +1,7 @@
 let nombreAmigo = [];
 let listaresutados = [];
 
+
 function agregarAmigo() {
   let amigo = document.getElementById("amigo").value;
   //Verificacion de nombre ingresado
@@ -28,35 +29,32 @@ function mostrarAmigos() {
 
 function sorterAmigos() {
   let indexAmigo = Math.floor(Math.random() * nombreAmigo.length);
-  let numeroJugadores = nombreAmigo.length%2 == 0;
   let resultado = "";
 
   for (let i = 0; i < nombreAmigo.length; i++) {
     resultado = nombreAmigo[indexAmigo];
   }
 
-  if(nombreAmigo.length == ""){
-    asignarTextoElemento("h2", "No hay amigos para sortear");
-    return;
-  } else
-  if  (numeroJugadores == 0) {
-    asignarTextoElemento("h2", `No hay ${numeroJugadores === 0 ? "mas" :"suficientes"} amigos para sortear`);
-  }else
-  if  (nombreAmigo.length == listaresutados.length) {
-    asignarTextoElemento("h2", `No hay ${numeroJugadores === 0 ? "mas" :"suficientes"} amigos para sortear`); 
+  if (nombreAmigo.length < 2 || !nombreAmigo || nombreAmigo.length % 2) {
+    asignarTextoElemento("h2", "No hay suficientes amigos para sortear");
+  } else if (nombreAmigo.length == listaresutados.length) {
+    asignarTextoElemento("h2", "No hay mas amigos para sortear");
     document.getElementById("reiniciar").removeAttribute("disabled");
-  }else if (listaresutados.includes(resultado)) {
+  } else if (
+    listaresutados.includes(resultado)
+  ) {
     sorterAmigos();
     return;
   } else {
     listaresutados.push(resultado);
-    asignarTextoElemento("h2", `El amigo secreto es: ${resultado}`);
+    asignarTextoElemento(
+      "h2",
+      `El amigo secreto es: ${resultado}`
+    );
   }
-  console.log(nombreAmigo.length%2);
+  console.log(resultado);
   return;
 }
-
-
 
 function asignarTextoElemento(elemento, texto) {
   let elementoHTML = document.querySelector(elemento);
@@ -65,7 +63,7 @@ function asignarTextoElemento(elemento, texto) {
 }
 
 function limpiar() {
-  document.getElementById("amigo").value="";
+  document.getElementById("amigo").value = "";
 }
 
 function resetear() {
